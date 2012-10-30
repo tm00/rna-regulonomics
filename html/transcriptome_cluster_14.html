@@ -1,0 +1,216 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Transcriptome cluster information page</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-06-08"><meta name="DC.source" content="transcriptome_cluster_14.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Transcriptome cluster information page</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Cluster number</a></li><li><a href="#2">Genes in cluster</a></li><li><a href="#3">LeMoNe predicted transcriptome regulators</a></li><li><a href="#4">Transcriptome expression profiles</a></li><li><a href="#5">Enriched MIPS functional categories</a></li><li><a href="#6">Enriched MIPS protein complexes</a></li><li><a href="#7">Enriched cellular compartments</a></li><li><a href="#8">Enriched for known transcription factor targets</a></li><li><a href="#9">Enriched for known RNA binding protein targets</a></li></ul></div><h2>Cluster number<a name="1"></a></h2><pre class="codeoutput">    14
+</pre><h2>Genes in cluster<a name="2"></a></h2><pre class="codeoutput">CYS3
+GCV3
+HIS7
+DLD3
+HIS1
+PYC1
+ADE3
+YHR162W
+BAT1
+HIS5
+QDR2
+LYS1
+STR2
+TRP3
+SHM2
+DIC1
+ECM40
+YNL058C
+ZWF1
+MCH4
+SER1
+ISU2
+PNG1
+ISU1
+DIP5
+</pre><h2>LeMoNe predicted transcriptome regulators<a name="3"></a></h2><pre class="codeoutput">UME6
+NPL3
+GCN4
+RME1
+NSR1
+HMS2
+HRB1
+IDH1
+HMS1
+CUP9
+</pre><h2>Transcriptome expression profiles<a name="4"></a></h2><img vspace="5" hspace="5" src="transcriptome_cluster_14_01.png" alt=""> <h2>Enriched MIPS functional categories<a name="5"></a></h2><pre class="codeoutput">degradation of lysine (P=6.36e-07)
+degradation of glycine (P=1.27e-06)
+biosynthesis of serine (P=2.21e-06)
+biosynthesis of histidine (P=3.1e-07)
+nitrogen, sulfur and selenium metabolism (P=6.93e-05)
+purin nucleotide/nucleoside/nucleobase metabolism (P=0.000241)
+purine nucleotide/nucleoside/nucleobase anabolism (P=5.19e-06)
+C-compound and carbohydrate metabolism (P=0.0127)
+tetrahydrofolate-dependent C-1-transfer (P=1.78e-05)
+metabolism of vitamins, cofactors, and prosthetic groups (P=1.51e-08)
+biosynthesis of vitamins, cofactors, and prosthetic groups (P=0.0103)
+glycolysis and gluconeogenesis (P=0.000614)
+NAD/NADP binding (P=0.000417)
+homeostasis of metal ions (Na, K, Ca etc.) (P=0.00749)
+</pre><h2>Enriched MIPS protein complexes<a name="6"></a></h2><pre class="codeoutput">None</pre><h2>Enriched cellular compartments<a name="7"></a></h2><pre class="codeoutput">plasma membrane (P=0.0398)
+mitochondria (P=0.016)
+mitochondrial matrix (P=0.000179)
+</pre><h2>Enriched for known transcription factor targets<a name="8"></a></h2><pre class="codeoutput">OAF1 regulates [QDR2, ECM40] (P=0.0061)
+YAP6 regulates [DLD3, LYS1] (P=0.0113)
+GCN4 regulates [HIS7, HIS1, ECM40, MCH4] (P=1.92e-05)
+BAS1 regulates [GCV3, HIS5, SHM2] (P=0.000169)
+PIP2 regulates [QDR2, TRP3] (P=0.00235)
+ARR1 regulates [HIS7, ZWF1] (P=0.00153)
+</pre><h2>Enriched for known RNA binding protein targets<a name="9"></a></h2><pre class="codeoutput">GBP2 regulates [PYC1, DIC1] (P=0.0292)
+NSR1 regulates [GCV3, DIC1] (P=0.0466)
+SCP160 regulates [CYS3, DLD3, PYC1, ADE3, LYS1, YNL058C, DIP5] (P=0.0414)
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Transcriptome cluster information page
+%
+
+%% Cluster number
+%clnum = 1;
+ix = find(total_clusters_big(:,clnum));
+disp(clnum)
+
+%% Genes in cluster
+gns = gene_names(ix);
+for m=1:length(gns)
+    fprintf('%s\n',gns{m});
+end
+
+%% LeMoNe predicted transcriptome regulators
+trreg = gene_names(totalclust_totalreg(:,clnum)>0);
+for m=1:length(trreg)
+    fprintf('%s\n',trreg{m});
+end
+
+%% Transcriptome expression profiles
+plot(total(ix,:)','b.-');
+axis tight
+
+%% Enriched MIPS functional categories
+pv = find(totalmipspval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',mips_names{m},totalmipspval(clnum,m));
+    end
+end
+
+%% Enriched MIPS protein complexes
+pv = find(totalcomplexpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',complex_names{m},totalcomplexpval(clnum,m));
+    end
+end
+
+%% Enriched cellular compartments
+pv = find(totallocalpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',subcell_names{m},totallocalpval(clnum,m));
+    end
+end
+
+%% Enriched for known transcription factor targets
+tfs = find(sum(harb_med,2)>0);
+pv = find(totalharbpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(harb_med(tfs(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{tfs(m)}, tgts, totalharbpval(clnum,m));
+    end
+end
+
+%% Enriched for known RNA binding protein targets
+rbps = find(sum(rbp,2)>0);
+pv = find(totalrbppval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(rbp(rbps(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{rbps(m)}, tgts, totalrbppval(clnum,m));
+    end
+end
+##### SOURCE END #####
+--></body></html>

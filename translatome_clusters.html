@@ -1,0 +1,296 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Translatome clusters</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-05-23"><meta name="DC.source" content="translatome_clusters.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Translatome clusters</h1><p><a href="html/translatome_cluster_1.html">Cluster 1</a> (Class II, 40 genes)</p><p><a href="html/translatome_cluster_2.html">Cluster 2</a> (Class II, 40 genes)</p><p><a href="html/translatome_cluster_3.html">Cluster 3</a> (Class III, 45 genes)</p><p><a href="html/translatome_cluster_4.html">Cluster 4</a> (Class III, 35 genes)</p><p><a href="html/translatome_cluster_5.html">Cluster 5</a> (Class II, 49 genes)</p><p><a href="html/translatome_cluster_6.html">Cluster 6</a> (Class III, 28 genes)</p><p><a href="html/translatome_cluster_7.html">Cluster 7</a> (Class II, 27 genes)</p><p><a href="html/translatome_cluster_8.html">Cluster 8</a> (Class III, 28 genes)</p><p><a href="html/translatome_cluster_9.html">Cluster 9</a> (Class III, 27 genes)</p><p><a href="html/translatome_cluster_10.html">Cluster 10</a> (Class III, 47 genes)</p><p><a href="html/translatome_cluster_11.html">Cluster 11</a> (Class III, 25 genes)</p><p><a href="html/translatome_cluster_12.html">Cluster 12</a> (Class III, 22 genes)</p><p><a href="html/translatome_cluster_13.html">Cluster 13</a> (Class II, 24 genes)</p><p><a href="html/translatome_cluster_14.html">Cluster 14</a> (Class III, 25 genes)</p><p><a href="html/translatome_cluster_15.html">Cluster 15</a> (Class III, 28 genes)</p><p><a href="html/translatome_cluster_16.html">Cluster 16</a> (Class II, 28 genes)</p><p><a href="html/translatome_cluster_17.html">Cluster 17</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_18.html">Cluster 18</a> (Class II, 54 genes)</p><p><a href="html/translatome_cluster_19.html">Cluster 19</a> (Class III, 21 genes)</p><p><a href="html/translatome_cluster_20.html">Cluster 20</a> (Class III, 19 genes)</p><p><a href="html/translatome_cluster_21.html">Cluster 21</a> (Class II, 22 genes)</p><p><a href="html/translatome_cluster_22.html">Cluster 22</a> (Class III, 17 genes)</p><p><a href="html/translatome_cluster_23.html">Cluster 23</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_24.html">Cluster 24</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_25.html">Cluster 25</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_26.html">Cluster 26</a> (Class II, 21 genes)</p><p><a href="html/translatome_cluster_27.html">Cluster 27</a> (Class II, 17 genes)</p><p><a href="html/translatome_cluster_28.html">Cluster 28</a> (Class II, 25 genes)</p><p><a href="html/translatome_cluster_29.html">Cluster 29</a> (Class II, 24 genes)</p><p><a href="html/translatome_cluster_30.html">Cluster 30</a> (Class II, 13 genes)</p><p><a href="html/translatome_cluster_31.html">Cluster 31</a> (Class II, 22 genes)</p><p><a href="html/translatome_cluster_32.html">Cluster 32</a> (Class I, 14 genes)</p><p><a href="html/translatome_cluster_33.html">Cluster 33</a> (Class I, 34 genes)</p><p><a href="html/translatome_cluster_34.html">Cluster 34</a> (Class III, 35 genes)</p><p><a href="html/translatome_cluster_35.html">Cluster 35</a> (Class III, 12 genes)</p><p><a href="html/translatome_cluster_36.html">Cluster 36</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_37.html">Cluster 37</a> (Class III, 11 genes)</p><p><a href="html/translatome_cluster_38.html">Cluster 38</a> (Class III, 12 genes)</p><p><a href="html/translatome_cluster_39.html">Cluster 39</a> (Class III, 15 genes)</p><p><a href="html/translatome_cluster_40.html">Cluster 40</a> (Class II, 12 genes)</p><p><a href="html/translatome_cluster_41.html">Cluster 41</a> (Class II, 32 genes)</p><p><a href="html/translatome_cluster_42.html">Cluster 42</a> (Class III, 27 genes)</p><p><a href="html/translatome_cluster_43.html">Cluster 43</a> (Class II, 11 genes)</p><p><a href="html/translatome_cluster_44.html">Cluster 44</a> (Class II, 24 genes)</p><p><a href="html/translatome_cluster_45.html">Cluster 45</a> (Class III, 10 genes)</p><p><a href="html/translatome_cluster_46.html">Cluster 46</a> (Class III, 22 genes)</p><p><a href="html/translatome_cluster_47.html">Cluster 47</a> (Class III, 12 genes)</p><p><a href="html/translatome_cluster_48.html">Cluster 48</a> (Class III, 14 genes)</p><p><a href="html/translatome_cluster_49.html">Cluster 49</a> (Class III, 17 genes)</p><p><a href="html/translatome_cluster_50.html">Cluster 50</a> (Class II, 9 genes)</p><p><a href="html/translatome_cluster_51.html">Cluster 51</a> (Class II, 10 genes)</p><p><a href="html/translatome_cluster_52.html">Cluster 52</a> (Class II, 11 genes)</p><p><a href="html/translatome_cluster_53.html">Cluster 53</a> (Class III, 9 genes)</p><p><a href="html/translatome_cluster_54.html">Cluster 54</a> (Class II, 31 genes)</p><p><a href="html/translatome_cluster_55.html">Cluster 55</a> (Class II, 8 genes)</p><p><a href="html/translatome_cluster_56.html">Cluster 56</a> (Class III, 7 genes)</p><p><a href="html/translatome_cluster_57.html">Cluster 57</a> (Class III, 8 genes)</p><p><a href="html/translatome_cluster_58.html">Cluster 58</a> (Class II, 45 genes)</p><p><a href="html/translatome_cluster_59.html">Cluster 59</a> (Class II, 14 genes)</p><p><a href="html/translatome_cluster_60.html">Cluster 60</a> (Class II, 79 genes)</p><p><a href="html/translatome_cluster_61.html">Cluster 61</a> (Class III, 6 genes)</p><p><a href="html/translatome_cluster_62.html">Cluster 62</a> (Class III, 16 genes)</p><p><a href="html/translatome_cluster_63.html">Cluster 63</a> (Class I, 6 genes)</p><p><a href="html/translatome_cluster_65.html">Cluster 65</a> (Class I, 6 genes)</p><p><a href="html/translatome_cluster_66.html">Cluster 66</a> (Class III, 9 genes)</p><p><a href="html/translatome_cluster_67.html">Cluster 67</a> (Class II, 5 genes)</p><p><a href="html/translatome_cluster_68.html">Cluster 68</a> (Class II, 7 genes)</p><p><a href="html/translatome_cluster_69.html">Cluster 69</a> (Class III, 19 genes)</p><p><a href="html/translatome_cluster_70.html">Cluster 70</a> (Class III, 13 genes)</p><p><a href="html/translatome_cluster_73.html">Cluster 73</a> (Class II, 21 genes)</p><p><a href="html/translatome_cluster_75.html">Cluster 75</a> (Class II, 8 genes)</p><p><a href="html/translatome_cluster_76.html">Cluster 76</a> (Class III, 8 genes)</p><p><a href="html/translatome_cluster_78.html">Cluster 78</a> (Class I, 4 genes)</p><p><a href="html/translatome_cluster_79.html">Cluster 79</a> (Class II, 7 genes)</p><p><a href="html/translatome_cluster_80.html">Cluster 80</a> (Class III, 8 genes)</p><p><a href="html/translatome_cluster_81.html">Cluster 81</a> (Class III, 13 genes)</p><p><a href="html/translatome_cluster_82.html">Cluster 82</a> (Class III, 5 genes)</p><p><a href="html/translatome_cluster_83.html">Cluster 83</a> (Class III, 8 genes)</p><p><a href="html/translatome_cluster_84.html">Cluster 84</a> (Class III, 4 genes)</p><p><a href="html/translatome_cluster_85.html">Cluster 85</a> (Class III, 16 genes)</p><p><a href="html/translatome_cluster_86.html">Cluster 86</a> (Class III, 18 genes)</p><p><a href="html/translatome_cluster_87.html">Cluster 87</a> (Class II, 14 genes)</p><p><a href="html/translatome_cluster_89.html">Cluster 89</a> (Class I, 5 genes)</p><p><a href="html/translatome_cluster_90.html">Cluster 90</a> (Class III, 6 genes)</p><p><a href="html/translatome_cluster_91.html">Cluster 91</a> (Class II, 15 genes)</p><p><a href="html/translatome_cluster_92.html">Cluster 92</a> (Class III, 9 genes)</p><p><a href="html/translatome_cluster_93.html">Cluster 93</a> (Class III, 9 genes)</p><p><a href="html/translatome_cluster_94.html">Cluster 94</a> (Class II, 24 genes)</p><p><a href="html/translatome_cluster_95.html">Cluster 95</a> (Class I, 4 genes)</p><p><a href="html/translatome_cluster_96.html">Cluster 96</a> (Class II, 11 genes)</p><p><a href="html/translatome_cluster_97.html">Cluster 97</a> (Class III, 13 genes)</p><p><a href="html/translatome_cluster_98.html">Cluster 98</a> (Class I, 4 genes)</p><p><a href="html/translatome_cluster_99.html">Cluster 99</a> (Class II, 19 genes)</p><p><a href="html/translatome_cluster_101.html">Cluster 101</a> (Class III, 13 genes)</p><p><a href="html/translatome_cluster_106.html">Cluster 106</a> (Class III, 7 genes)</p><p><a href="html/translatome_cluster_107.html">Cluster 107</a> (Class I, 4 genes)</p><p><a href="html/translatome_cluster_110.html">Cluster 110</a> (Class III, 8 genes)</p><p><a href="html/translatome_cluster_112.html">Cluster 112</a> (Class II, 10 genes)</p><p><a href="html/translatome_cluster_113.html">Cluster 113</a> (Class II, 17 genes)</p><p><a href="html/translatome_cluster_117.html">Cluster 117</a> (Class III, 4 genes)</p><p><a href="html/translatome_cluster_118.html">Cluster 118</a> (Class II, 5 genes)</p><p><a href="html/translatome_cluster_119.html">Cluster 119</a> (Class III, 36 genes)</p><p><a href="html/translatome_cluster_120.html">Cluster 120</a> (Class II, 7 genes)</p><p><a href="html/translatome_cluster_132.html">Cluster 132</a> (Class III, 6 genes)</p><p><a href="html/translatome_cluster_134.html">Cluster 134</a> (Class III, 13 genes)</p><p><a href="html/translatome_cluster_135.html">Cluster 135</a> (Class III, 4 genes)</p><p><a href="html/translatome_cluster_146.html">Cluster 146</a> (Class II, 4 genes)</p><p><a href="html/translatome_cluster_149.html">Cluster 149</a> (Class III, 7 genes)</p><p><a href="html/translatome_cluster_152.html">Cluster 152</a> (Class III, 4 genes)</p><p><a href="html/translatome_cluster_153.html">Cluster 153</a> (Class II, 9 genes)</p><p><a href="html/translatome_cluster_154.html">Cluster 154</a> (Class III, 9 genes)</p><p><a href="html/translatome_cluster_159.html">Cluster 159</a> (Class III, 9 genes)</p><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Translatome clusters
+% 
+% <html/translatome_cluster_1.html Cluster 1> (Class II, 40 genes)
+% 
+% <html/translatome_cluster_2.html Cluster 2> (Class II, 40 genes)
+% 
+% <html/translatome_cluster_3.html Cluster 3> (Class III, 45 genes)
+% 
+% <html/translatome_cluster_4.html Cluster 4> (Class III, 35 genes)
+% 
+% <html/translatome_cluster_5.html Cluster 5> (Class II, 49 genes)
+% 
+% <html/translatome_cluster_6.html Cluster 6> (Class III, 28 genes)
+% 
+% <html/translatome_cluster_7.html Cluster 7> (Class II, 27 genes)
+% 
+% <html/translatome_cluster_8.html Cluster 8> (Class III, 28 genes)
+% 
+% <html/translatome_cluster_9.html Cluster 9> (Class III, 27 genes)
+% 
+% <html/translatome_cluster_10.html Cluster 10> (Class III, 47 genes)
+% 
+% <html/translatome_cluster_11.html Cluster 11> (Class III, 25 genes)
+% 
+% <html/translatome_cluster_12.html Cluster 12> (Class III, 22 genes)
+% 
+% <html/translatome_cluster_13.html Cluster 13> (Class II, 24 genes)
+% 
+% <html/translatome_cluster_14.html Cluster 14> (Class III, 25 genes)
+% 
+% <html/translatome_cluster_15.html Cluster 15> (Class III, 28 genes)
+% 
+% <html/translatome_cluster_16.html Cluster 16> (Class II, 28 genes)
+% 
+% <html/translatome_cluster_17.html Cluster 17> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_18.html Cluster 18> (Class II, 54 genes)
+% 
+% <html/translatome_cluster_19.html Cluster 19> (Class III, 21 genes)
+% 
+% <html/translatome_cluster_20.html Cluster 20> (Class III, 19 genes)
+% 
+% <html/translatome_cluster_21.html Cluster 21> (Class II, 22 genes)
+% 
+% <html/translatome_cluster_22.html Cluster 22> (Class III, 17 genes)
+% 
+% <html/translatome_cluster_23.html Cluster 23> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_24.html Cluster 24> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_25.html Cluster 25> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_26.html Cluster 26> (Class II, 21 genes)
+% 
+% <html/translatome_cluster_27.html Cluster 27> (Class II, 17 genes)
+% 
+% <html/translatome_cluster_28.html Cluster 28> (Class II, 25 genes)
+% 
+% <html/translatome_cluster_29.html Cluster 29> (Class II, 24 genes)
+% 
+% <html/translatome_cluster_30.html Cluster 30> (Class II, 13 genes)
+% 
+% <html/translatome_cluster_31.html Cluster 31> (Class II, 22 genes)
+% 
+% <html/translatome_cluster_32.html Cluster 32> (Class I, 14 genes)
+% 
+% <html/translatome_cluster_33.html Cluster 33> (Class I, 34 genes)
+% 
+% <html/translatome_cluster_34.html Cluster 34> (Class III, 35 genes)
+% 
+% <html/translatome_cluster_35.html Cluster 35> (Class III, 12 genes)
+% 
+% <html/translatome_cluster_36.html Cluster 36> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_37.html Cluster 37> (Class III, 11 genes)
+% 
+% <html/translatome_cluster_38.html Cluster 38> (Class III, 12 genes)
+% 
+% <html/translatome_cluster_39.html Cluster 39> (Class III, 15 genes)
+% 
+% <html/translatome_cluster_40.html Cluster 40> (Class II, 12 genes)
+% 
+% <html/translatome_cluster_41.html Cluster 41> (Class II, 32 genes)
+% 
+% <html/translatome_cluster_42.html Cluster 42> (Class III, 27 genes)
+% 
+% <html/translatome_cluster_43.html Cluster 43> (Class II, 11 genes)
+% 
+% <html/translatome_cluster_44.html Cluster 44> (Class II, 24 genes)
+% 
+% <html/translatome_cluster_45.html Cluster 45> (Class III, 10 genes)
+% 
+% <html/translatome_cluster_46.html Cluster 46> (Class III, 22 genes)
+% 
+% <html/translatome_cluster_47.html Cluster 47> (Class III, 12 genes)
+% 
+% <html/translatome_cluster_48.html Cluster 48> (Class III, 14 genes)
+% 
+% <html/translatome_cluster_49.html Cluster 49> (Class III, 17 genes)
+% 
+% <html/translatome_cluster_50.html Cluster 50> (Class II, 9 genes)
+% 
+% <html/translatome_cluster_51.html Cluster 51> (Class II, 10 genes)
+% 
+% <html/translatome_cluster_52.html Cluster 52> (Class II, 11 genes)
+% 
+% <html/translatome_cluster_53.html Cluster 53> (Class III, 9 genes)
+% 
+% <html/translatome_cluster_54.html Cluster 54> (Class II, 31 genes)
+% 
+% <html/translatome_cluster_55.html Cluster 55> (Class II, 8 genes)
+% 
+% <html/translatome_cluster_56.html Cluster 56> (Class III, 7 genes)
+% 
+% <html/translatome_cluster_57.html Cluster 57> (Class III, 8 genes)
+% 
+% <html/translatome_cluster_58.html Cluster 58> (Class II, 45 genes)
+% 
+% <html/translatome_cluster_59.html Cluster 59> (Class II, 14 genes)
+% 
+% <html/translatome_cluster_60.html Cluster 60> (Class II, 79 genes)
+% 
+% <html/translatome_cluster_61.html Cluster 61> (Class III, 6 genes)
+% 
+% <html/translatome_cluster_62.html Cluster 62> (Class III, 16 genes)
+% 
+% <html/translatome_cluster_63.html Cluster 63> (Class I, 6 genes)
+% 
+% <html/translatome_cluster_65.html Cluster 65> (Class I, 6 genes)
+% 
+% <html/translatome_cluster_66.html Cluster 66> (Class III, 9 genes)
+% 
+% <html/translatome_cluster_67.html Cluster 67> (Class II, 5 genes)
+% 
+% <html/translatome_cluster_68.html Cluster 68> (Class II, 7 genes)
+% 
+% <html/translatome_cluster_69.html Cluster 69> (Class III, 19 genes)
+% 
+% <html/translatome_cluster_70.html Cluster 70> (Class III, 13 genes)
+% 
+% <html/translatome_cluster_73.html Cluster 73> (Class II, 21 genes)
+% 
+% <html/translatome_cluster_75.html Cluster 75> (Class II, 8 genes)
+% 
+% <html/translatome_cluster_76.html Cluster 76> (Class III, 8 genes)
+% 
+% <html/translatome_cluster_78.html Cluster 78> (Class I, 4 genes)
+% 
+% <html/translatome_cluster_79.html Cluster 79> (Class II, 7 genes)
+% 
+% <html/translatome_cluster_80.html Cluster 80> (Class III, 8 genes)
+% 
+% <html/translatome_cluster_81.html Cluster 81> (Class III, 13 genes)
+% 
+% <html/translatome_cluster_82.html Cluster 82> (Class III, 5 genes)
+% 
+% <html/translatome_cluster_83.html Cluster 83> (Class III, 8 genes)
+% 
+% <html/translatome_cluster_84.html Cluster 84> (Class III, 4 genes)
+% 
+% <html/translatome_cluster_85.html Cluster 85> (Class III, 16 genes)
+% 
+% <html/translatome_cluster_86.html Cluster 86> (Class III, 18 genes)
+% 
+% <html/translatome_cluster_87.html Cluster 87> (Class II, 14 genes)
+% 
+% <html/translatome_cluster_89.html Cluster 89> (Class I, 5 genes)
+% 
+% <html/translatome_cluster_90.html Cluster 90> (Class III, 6 genes)
+% 
+% <html/translatome_cluster_91.html Cluster 91> (Class II, 15 genes)
+% 
+% <html/translatome_cluster_92.html Cluster 92> (Class III, 9 genes)
+% 
+% <html/translatome_cluster_93.html Cluster 93> (Class III, 9 genes)
+% 
+% <html/translatome_cluster_94.html Cluster 94> (Class II, 24 genes)
+% 
+% <html/translatome_cluster_95.html Cluster 95> (Class I, 4 genes)
+% 
+% <html/translatome_cluster_96.html Cluster 96> (Class II, 11 genes)
+% 
+% <html/translatome_cluster_97.html Cluster 97> (Class III, 13 genes)
+% 
+% <html/translatome_cluster_98.html Cluster 98> (Class I, 4 genes)
+% 
+% <html/translatome_cluster_99.html Cluster 99> (Class II, 19 genes)
+% 
+% <html/translatome_cluster_101.html Cluster 101> (Class III, 13 genes)
+% 
+% <html/translatome_cluster_106.html Cluster 106> (Class III, 7 genes)
+% 
+% <html/translatome_cluster_107.html Cluster 107> (Class I, 4 genes)
+% 
+% <html/translatome_cluster_110.html Cluster 110> (Class III, 8 genes)
+% 
+% <html/translatome_cluster_112.html Cluster 112> (Class II, 10 genes)
+% 
+% <html/translatome_cluster_113.html Cluster 113> (Class II, 17 genes)
+% 
+% <html/translatome_cluster_117.html Cluster 117> (Class III, 4 genes)
+% 
+% <html/translatome_cluster_118.html Cluster 118> (Class II, 5 genes)
+% 
+% <html/translatome_cluster_119.html Cluster 119> (Class III, 36 genes)
+% 
+% <html/translatome_cluster_120.html Cluster 120> (Class II, 7 genes)
+% 
+% <html/translatome_cluster_132.html Cluster 132> (Class III, 6 genes)
+% 
+% <html/translatome_cluster_134.html Cluster 134> (Class III, 13 genes)
+% 
+% <html/translatome_cluster_135.html Cluster 135> (Class III, 4 genes)
+% 
+% <html/translatome_cluster_146.html Cluster 146> (Class II, 4 genes)
+% 
+% <html/translatome_cluster_149.html Cluster 149> (Class III, 7 genes)
+% 
+% <html/translatome_cluster_152.html Cluster 152> (Class III, 4 genes)
+% 
+% <html/translatome_cluster_153.html Cluster 153> (Class II, 9 genes)
+% 
+% <html/translatome_cluster_154.html Cluster 154> (Class III, 9 genes)
+% 
+% <html/translatome_cluster_159.html Cluster 159> (Class III, 9 genes)
+% 
+
+##### SOURCE END #####
+--></body></html>

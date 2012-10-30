@@ -1,0 +1,208 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Transcriptome cluster information page</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-06-08"><meta name="DC.source" content="transcriptome_cluster_11.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Transcriptome cluster information page</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Cluster number</a></li><li><a href="#2">Genes in cluster</a></li><li><a href="#3">LeMoNe predicted transcriptome regulators</a></li><li><a href="#4">Transcriptome expression profiles</a></li><li><a href="#5">Enriched MIPS functional categories</a></li><li><a href="#6">Enriched MIPS protein complexes</a></li><li><a href="#7">Enriched cellular compartments</a></li><li><a href="#8">Enriched for known transcription factor targets</a></li><li><a href="#9">Enriched for known RNA binding protein targets</a></li></ul></div><h2>Cluster number<a name="1"></a></h2><pre class="codeoutput">    11
+</pre><h2>Genes in cluster<a name="2"></a></h2><pre class="codeoutput">MAK16
+PHO3
+ENP1
+SPB1
+DBP10
+NHP2
+TRP4
+UTR2
+NSA2
+ZPR1
+SSF1
+IMP3
+DBP8
+UTP9
+UTP18
+ALB1
+RPA34
+LIA1
+YLR073C
+BUD22
+UTP15
+NOP2
+NOG2
+RPA43
+YOR342C
+NOP4
+MRD1
+</pre><h2>LeMoNe predicted transcriptome regulators<a name="3"></a></h2><pre class="codeoutput">MAL33
+JHD1
+YGR067C
+NSR1
+MET28
+SHE2
+SIK1
+KRE33
+VTS1
+GAL4
+</pre><h2>Transcriptome expression profiles<a name="4"></a></h2><img vspace="5" hspace="5" src="transcriptome_cluster_11_01.png" alt=""> <h2>Enriched MIPS functional categories<a name="5"></a></h2><pre class="codeoutput">rRNA synthesis (P=0.00182)
+rRNA processing (P=3.15e-12)
+rRNA modification (P=9.54e-07)
+ribosome biogenesis (P=7.94e-06)
+DNA binding (P=0.0335)
+RNA binding (P=4.02e-09)
+</pre><h2>Enriched MIPS protein complexes<a name="6"></a></h2><pre class="codeoutput">RNA polymerase I (P=2.86e-05)
+</pre><h2>Enriched cellular compartments<a name="7"></a></h2><pre class="codeoutput">nucleus (P=1.7e-07)
+nuclear matrix (P=0.000526)
+nucleolus (P=1.1e-12)
+</pre><h2>Enriched for known transcription factor targets<a name="8"></a></h2><pre class="codeoutput">ACE2 regulates [ENP1, NSA2, RPA34] (P=0.000638)
+MCM1 regulates [NOP4, MRD1] (P=0.0134)
+</pre><h2>Enriched for known RNA binding protein targets<a name="9"></a></h2><pre class="codeoutput">GBP2 regulates [MAK16, SPB1, SSF1, RPA34, BUD22, NOP4] (P=5.39e-06)
+PUF4 regulates [MAK16, DBP10, NHP2, NSA2, ALB1, NOP2, NOG2, NOP4] (P=1.8e-07)
+SCP160 regulates [PHO3, ENP1, SPB1, DBP10, UTR2, UTP18, BUD22, UTP15, NOP4, MRD1] (P=0.00229)
+CBF5 regulates [YLR073C, NOG2] (P=0.00258)
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Transcriptome cluster information page
+%
+
+%% Cluster number
+%clnum = 1;
+ix = find(total_clusters_big(:,clnum));
+disp(clnum)
+
+%% Genes in cluster
+gns = gene_names(ix);
+for m=1:length(gns)
+    fprintf('%s\n',gns{m});
+end
+
+%% LeMoNe predicted transcriptome regulators
+trreg = gene_names(totalclust_totalreg(:,clnum)>0);
+for m=1:length(trreg)
+    fprintf('%s\n',trreg{m});
+end
+
+%% Transcriptome expression profiles
+plot(total(ix,:)','b.-');
+axis tight
+
+%% Enriched MIPS functional categories
+pv = find(totalmipspval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',mips_names{m},totalmipspval(clnum,m));
+    end
+end
+
+%% Enriched MIPS protein complexes
+pv = find(totalcomplexpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',complex_names{m},totalcomplexpval(clnum,m));
+    end
+end
+
+%% Enriched cellular compartments
+pv = find(totallocalpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',subcell_names{m},totallocalpval(clnum,m));
+    end
+end
+
+%% Enriched for known transcription factor targets
+tfs = find(sum(harb_med,2)>0);
+pv = find(totalharbpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(harb_med(tfs(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{tfs(m)}, tgts, totalharbpval(clnum,m));
+    end
+end
+
+%% Enriched for known RNA binding protein targets
+rbps = find(sum(rbp,2)>0);
+pv = find(totalrbppval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(rbp(rbps(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{rbps(m)}, tgts, totalrbppval(clnum,m));
+    end
+end
+##### SOURCE END #####
+--></body></html>

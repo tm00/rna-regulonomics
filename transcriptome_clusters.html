@@ -1,0 +1,262 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Transcriptome clusters</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-06-08"><meta name="DC.source" content="transcriptome_clusters.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Transcriptome clusters</h1><p><a href="html/transcriptome_cluster_1.html">Cluster 1</a> (53 genes)</p><p><a href="html/transcriptome_cluster_2.html">Cluster 2</a> (49 genes)</p><p><a href="html/transcriptome_cluster_3.html">Cluster 3</a> (38 genes)</p><p><a href="html/transcriptome_cluster_4.html">Cluster 4</a> (32 genes)</p><p><a href="html/transcriptome_cluster_5.html">Cluster 5</a> (35 genes)</p><p><a href="html/transcriptome_cluster_6.html">Cluster 6</a> (79 genes)</p><p><a href="html/transcriptome_cluster_7.html">Cluster 7</a> (37 genes)</p><p><a href="html/transcriptome_cluster_8.html">Cluster 8</a> (28 genes)</p><p><a href="html/transcriptome_cluster_9.html">Cluster 9</a> (27 genes)</p><p><a href="html/transcriptome_cluster_10.html">Cluster 10</a> (25 genes)</p><p><a href="html/transcriptome_cluster_11.html">Cluster 11</a> (27 genes)</p><p><a href="html/transcriptome_cluster_12.html">Cluster 12</a> (23 genes)</p><p><a href="html/transcriptome_cluster_13.html">Cluster 13</a> (19 genes)</p><p><a href="html/transcriptome_cluster_14.html">Cluster 14</a> (25 genes)</p><p><a href="html/transcriptome_cluster_15.html">Cluster 15</a> (20 genes)</p><p><a href="html/transcriptome_cluster_16.html">Cluster 16</a> (23 genes)</p><p><a href="html/transcriptome_cluster_17.html">Cluster 17</a> (36 genes)</p><p><a href="html/transcriptome_cluster_18.html">Cluster 18</a> (33 genes)</p><p><a href="html/transcriptome_cluster_19.html">Cluster 19</a> (22 genes)</p><p><a href="html/transcriptome_cluster_20.html">Cluster 20</a> (23 genes)</p><p><a href="html/transcriptome_cluster_21.html">Cluster 21</a> (31 genes)</p><p><a href="html/transcriptome_cluster_22.html">Cluster 22</a> (55 genes)</p><p><a href="html/transcriptome_cluster_23.html">Cluster 23</a> (19 genes)</p><p><a href="html/transcriptome_cluster_24.html">Cluster 24</a> (18 genes)</p><p><a href="html/transcriptome_cluster_25.html">Cluster 25</a> (20 genes)</p><p><a href="html/transcriptome_cluster_26.html">Cluster 26</a> (19 genes)</p><p><a href="html/transcriptome_cluster_27.html">Cluster 27</a> (12 genes)</p><p><a href="html/transcriptome_cluster_28.html">Cluster 28</a> (15 genes)</p><p><a href="html/transcriptome_cluster_29.html">Cluster 29</a> (15 genes)</p><p><a href="html/transcriptome_cluster_30.html">Cluster 30</a> (11 genes)</p><p><a href="html/transcriptome_cluster_31.html">Cluster 31</a> (12 genes)</p><p><a href="html/transcriptome_cluster_32.html">Cluster 32</a> (16 genes)</p><p><a href="html/transcriptome_cluster_33.html">Cluster 33</a> (11 genes)</p><p><a href="html/transcriptome_cluster_34.html">Cluster 34</a> (12 genes)</p><p><a href="html/transcriptome_cluster_35.html">Cluster 35</a> (12 genes)</p><p><a href="html/transcriptome_cluster_36.html">Cluster 36</a> (26 genes)</p><p><a href="html/transcriptome_cluster_37.html">Cluster 37</a> (10 genes)</p><p><a href="html/transcriptome_cluster_38.html">Cluster 38</a> (9 genes)</p><p><a href="html/transcriptome_cluster_39.html">Cluster 39</a> (35 genes)</p><p><a href="html/transcriptome_cluster_40.html">Cluster 40</a> (10 genes)</p><p><a href="html/transcriptome_cluster_41.html">Cluster 41</a> (13 genes)</p><p><a href="html/transcriptome_cluster_42.html">Cluster 42</a> (10 genes)</p><p><a href="html/transcriptome_cluster_43.html">Cluster 43</a> (9 genes)</p><p><a href="html/transcriptome_cluster_44.html">Cluster 44</a> (12 genes)</p><p><a href="html/transcriptome_cluster_45.html">Cluster 45</a> (8 genes)</p><p><a href="html/transcriptome_cluster_46.html">Cluster 46</a> (8 genes)</p><p><a href="html/transcriptome_cluster_47.html">Cluster 47</a> (8 genes)</p><p><a href="html/transcriptome_cluster_48.html">Cluster 48</a> (15 genes)</p><p><a href="html/transcriptome_cluster_49.html">Cluster 49</a> (11 genes)</p><p><a href="html/transcriptome_cluster_50.html">Cluster 50</a> (10 genes)</p><p><a href="html/transcriptome_cluster_51.html">Cluster 51</a> (14 genes)</p><p><a href="html/transcriptome_cluster_52.html">Cluster 52</a> (9 genes)</p><p><a href="html/transcriptome_cluster_53.html">Cluster 53</a> (7 genes)</p><p><a href="html/transcriptome_cluster_54.html">Cluster 54</a> (7 genes)</p><p><a href="html/transcriptome_cluster_55.html">Cluster 55</a> (36 genes)</p><p><a href="html/transcriptome_cluster_56.html">Cluster 56</a> (9 genes)</p><p><a href="html/transcriptome_cluster_57.html">Cluster 57</a> (9 genes)</p><p><a href="html/transcriptome_cluster_58.html">Cluster 58</a> (11 genes)</p><p><a href="html/transcriptome_cluster_59.html">Cluster 59</a> (8 genes)</p><p><a href="html/transcriptome_cluster_60.html">Cluster 60</a> (7 genes)</p><p><a href="html/transcriptome_cluster_61.html">Cluster 61</a> (12 genes)</p><p><a href="html/transcriptome_cluster_62.html">Cluster 62</a> (8 genes)</p><p><a href="html/transcriptome_cluster_63.html">Cluster 63</a> (12 genes)</p><p><a href="html/transcriptome_cluster_66.html">Cluster 66</a> (11 genes)</p><p><a href="html/transcriptome_cluster_67.html">Cluster 67</a> (6 genes)</p><p><a href="html/transcriptome_cluster_69.html">Cluster 69</a> (6 genes)</p><p><a href="html/transcriptome_cluster_70.html">Cluster 70</a> (15 genes)</p><p><a href="html/transcriptome_cluster_72.html">Cluster 72</a> (15 genes)</p><p><a href="html/transcriptome_cluster_73.html">Cluster 73</a> (5 genes)</p><p><a href="html/transcriptome_cluster_74.html">Cluster 74</a> (6 genes)</p><p><a href="html/transcriptome_cluster_75.html">Cluster 75</a> (4 genes)</p><p><a href="html/transcriptome_cluster_76.html">Cluster 76</a> (12 genes)</p><p><a href="html/transcriptome_cluster_77.html">Cluster 77</a> (5 genes)</p><p><a href="html/transcriptome_cluster_78.html">Cluster 78</a> (6 genes)</p><p><a href="html/transcriptome_cluster_79.html">Cluster 79</a> (4 genes)</p><p><a href="html/transcriptome_cluster_80.html">Cluster 80</a> (6 genes)</p><p><a href="html/transcriptome_cluster_81.html">Cluster 81</a> (15 genes)</p><p><a href="html/transcriptome_cluster_82.html">Cluster 82</a> (4 genes)</p><p><a href="html/transcriptome_cluster_84.html">Cluster 84</a> (15 genes)</p><p><a href="html/transcriptome_cluster_85.html">Cluster 85</a> (8 genes)</p><p><a href="html/transcriptome_cluster_86.html">Cluster 86</a> (4 genes)</p><p><a href="html/transcriptome_cluster_92.html">Cluster 92</a> (29 genes)</p><p><a href="html/transcriptome_cluster_93.html">Cluster 93</a> (12 genes)</p><p><a href="html/transcriptome_cluster_94.html">Cluster 94</a> (4 genes)</p><p><a href="html/transcriptome_cluster_95.html">Cluster 95</a> (12 genes)</p><p><a href="html/transcriptome_cluster_97.html">Cluster 97</a> (11 genes)</p><p><a href="html/transcriptome_cluster_107.html">Cluster 107</a> (6 genes)</p><p><a href="html/transcriptome_cluster_110.html">Cluster 110</a> (5 genes)</p><p><a href="html/transcriptome_cluster_112.html">Cluster 112</a> (8 genes)</p><p><a href="html/transcriptome_cluster_114.html">Cluster 114</a> (10 genes)</p><p><a href="html/transcriptome_cluster_115.html">Cluster 115</a> (6 genes)</p><p><a href="html/transcriptome_cluster_118.html">Cluster 118</a> (8 genes)</p><p><a href="html/transcriptome_cluster_121.html">Cluster 121</a> (24 genes)</p><p><a href="html/transcriptome_cluster_122.html">Cluster 122</a> (4 genes)</p><p><a href="html/transcriptome_cluster_138.html">Cluster 138</a> (7 genes)</p><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Transcriptome clusters
+% 
+% <html/transcriptome_cluster_1.html Cluster 1> (53 genes)
+% 
+% <html/transcriptome_cluster_2.html Cluster 2> (49 genes)
+% 
+% <html/transcriptome_cluster_3.html Cluster 3> (38 genes)
+% 
+% <html/transcriptome_cluster_4.html Cluster 4> (32 genes)
+% 
+% <html/transcriptome_cluster_5.html Cluster 5> (35 genes)
+% 
+% <html/transcriptome_cluster_6.html Cluster 6> (79 genes)
+% 
+% <html/transcriptome_cluster_7.html Cluster 7> (37 genes)
+% 
+% <html/transcriptome_cluster_8.html Cluster 8> (28 genes)
+% 
+% <html/transcriptome_cluster_9.html Cluster 9> (27 genes)
+% 
+% <html/transcriptome_cluster_10.html Cluster 10> (25 genes)
+% 
+% <html/transcriptome_cluster_11.html Cluster 11> (27 genes)
+% 
+% <html/transcriptome_cluster_12.html Cluster 12> (23 genes)
+% 
+% <html/transcriptome_cluster_13.html Cluster 13> (19 genes)
+% 
+% <html/transcriptome_cluster_14.html Cluster 14> (25 genes)
+% 
+% <html/transcriptome_cluster_15.html Cluster 15> (20 genes)
+% 
+% <html/transcriptome_cluster_16.html Cluster 16> (23 genes)
+% 
+% <html/transcriptome_cluster_17.html Cluster 17> (36 genes)
+% 
+% <html/transcriptome_cluster_18.html Cluster 18> (33 genes)
+% 
+% <html/transcriptome_cluster_19.html Cluster 19> (22 genes)
+% 
+% <html/transcriptome_cluster_20.html Cluster 20> (23 genes)
+% 
+% <html/transcriptome_cluster_21.html Cluster 21> (31 genes)
+% 
+% <html/transcriptome_cluster_22.html Cluster 22> (55 genes)
+% 
+% <html/transcriptome_cluster_23.html Cluster 23> (19 genes)
+% 
+% <html/transcriptome_cluster_24.html Cluster 24> (18 genes)
+% 
+% <html/transcriptome_cluster_25.html Cluster 25> (20 genes)
+% 
+% <html/transcriptome_cluster_26.html Cluster 26> (19 genes)
+% 
+% <html/transcriptome_cluster_27.html Cluster 27> (12 genes)
+% 
+% <html/transcriptome_cluster_28.html Cluster 28> (15 genes)
+% 
+% <html/transcriptome_cluster_29.html Cluster 29> (15 genes)
+% 
+% <html/transcriptome_cluster_30.html Cluster 30> (11 genes)
+% 
+% <html/transcriptome_cluster_31.html Cluster 31> (12 genes)
+% 
+% <html/transcriptome_cluster_32.html Cluster 32> (16 genes)
+% 
+% <html/transcriptome_cluster_33.html Cluster 33> (11 genes)
+% 
+% <html/transcriptome_cluster_34.html Cluster 34> (12 genes)
+% 
+% <html/transcriptome_cluster_35.html Cluster 35> (12 genes)
+% 
+% <html/transcriptome_cluster_36.html Cluster 36> (26 genes)
+% 
+% <html/transcriptome_cluster_37.html Cluster 37> (10 genes)
+% 
+% <html/transcriptome_cluster_38.html Cluster 38> (9 genes)
+% 
+% <html/transcriptome_cluster_39.html Cluster 39> (35 genes)
+% 
+% <html/transcriptome_cluster_40.html Cluster 40> (10 genes)
+% 
+% <html/transcriptome_cluster_41.html Cluster 41> (13 genes)
+% 
+% <html/transcriptome_cluster_42.html Cluster 42> (10 genes)
+% 
+% <html/transcriptome_cluster_43.html Cluster 43> (9 genes)
+% 
+% <html/transcriptome_cluster_44.html Cluster 44> (12 genes)
+% 
+% <html/transcriptome_cluster_45.html Cluster 45> (8 genes)
+% 
+% <html/transcriptome_cluster_46.html Cluster 46> (8 genes)
+% 
+% <html/transcriptome_cluster_47.html Cluster 47> (8 genes)
+% 
+% <html/transcriptome_cluster_48.html Cluster 48> (15 genes)
+% 
+% <html/transcriptome_cluster_49.html Cluster 49> (11 genes)
+% 
+% <html/transcriptome_cluster_50.html Cluster 50> (10 genes)
+% 
+% <html/transcriptome_cluster_51.html Cluster 51> (14 genes)
+% 
+% <html/transcriptome_cluster_52.html Cluster 52> (9 genes)
+% 
+% <html/transcriptome_cluster_53.html Cluster 53> (7 genes)
+% 
+% <html/transcriptome_cluster_54.html Cluster 54> (7 genes)
+% 
+% <html/transcriptome_cluster_55.html Cluster 55> (36 genes)
+% 
+% <html/transcriptome_cluster_56.html Cluster 56> (9 genes)
+% 
+% <html/transcriptome_cluster_57.html Cluster 57> (9 genes)
+% 
+% <html/transcriptome_cluster_58.html Cluster 58> (11 genes)
+% 
+% <html/transcriptome_cluster_59.html Cluster 59> (8 genes)
+% 
+% <html/transcriptome_cluster_60.html Cluster 60> (7 genes)
+% 
+% <html/transcriptome_cluster_61.html Cluster 61> (12 genes)
+% 
+% <html/transcriptome_cluster_62.html Cluster 62> (8 genes)
+% 
+% <html/transcriptome_cluster_63.html Cluster 63> (12 genes)
+% 
+% <html/transcriptome_cluster_66.html Cluster 66> (11 genes)
+% 
+% <html/transcriptome_cluster_67.html Cluster 67> (6 genes)
+% 
+% <html/transcriptome_cluster_69.html Cluster 69> (6 genes)
+% 
+% <html/transcriptome_cluster_70.html Cluster 70> (15 genes)
+% 
+% <html/transcriptome_cluster_72.html Cluster 72> (15 genes)
+% 
+% <html/transcriptome_cluster_73.html Cluster 73> (5 genes)
+% 
+% <html/transcriptome_cluster_74.html Cluster 74> (6 genes)
+% 
+% <html/transcriptome_cluster_75.html Cluster 75> (4 genes)
+% 
+% <html/transcriptome_cluster_76.html Cluster 76> (12 genes)
+% 
+% <html/transcriptome_cluster_77.html Cluster 77> (5 genes)
+% 
+% <html/transcriptome_cluster_78.html Cluster 78> (6 genes)
+% 
+% <html/transcriptome_cluster_79.html Cluster 79> (4 genes)
+% 
+% <html/transcriptome_cluster_80.html Cluster 80> (6 genes)
+% 
+% <html/transcriptome_cluster_81.html Cluster 81> (15 genes)
+% 
+% <html/transcriptome_cluster_82.html Cluster 82> (4 genes)
+% 
+% <html/transcriptome_cluster_84.html Cluster 84> (15 genes)
+% 
+% <html/transcriptome_cluster_85.html Cluster 85> (8 genes)
+% 
+% <html/transcriptome_cluster_86.html Cluster 86> (4 genes)
+% 
+% <html/transcriptome_cluster_92.html Cluster 92> (29 genes)
+% 
+% <html/transcriptome_cluster_93.html Cluster 93> (12 genes)
+% 
+% <html/transcriptome_cluster_94.html Cluster 94> (4 genes)
+% 
+% <html/transcriptome_cluster_95.html Cluster 95> (12 genes)
+% 
+% <html/transcriptome_cluster_97.html Cluster 97> (11 genes)
+% 
+% <html/transcriptome_cluster_107.html Cluster 107> (6 genes)
+% 
+% <html/transcriptome_cluster_110.html Cluster 110> (5 genes)
+% 
+% <html/transcriptome_cluster_112.html Cluster 112> (8 genes)
+% 
+% <html/transcriptome_cluster_114.html Cluster 114> (10 genes)
+% 
+% <html/transcriptome_cluster_115.html Cluster 115> (6 genes)
+% 
+% <html/transcriptome_cluster_118.html Cluster 118> (8 genes)
+% 
+% <html/transcriptome_cluster_121.html Cluster 121> (24 genes)
+% 
+% <html/transcriptome_cluster_122.html Cluster 122> (4 genes)
+% 
+% <html/transcriptome_cluster_138.html Cluster 138> (7 genes)
+% 
+
+##### SOURCE END #####
+--></body></html>
