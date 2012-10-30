@@ -1,0 +1,224 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Transcriptome cluster information page</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-06-08"><meta name="DC.source" content="transcriptome_cluster_39.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Transcriptome cluster information page</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Cluster number</a></li><li><a href="#2">Genes in cluster</a></li><li><a href="#3">LeMoNe predicted transcriptome regulators</a></li><li><a href="#4">Transcriptome expression profiles</a></li><li><a href="#5">Enriched MIPS functional categories</a></li><li><a href="#6">Enriched MIPS protein complexes</a></li><li><a href="#7">Enriched cellular compartments</a></li><li><a href="#8">Enriched for known transcription factor targets</a></li><li><a href="#9">Enriched for known RNA binding protein targets</a></li></ul></div><h2>Cluster number<a name="1"></a></h2><pre class="codeoutput">    39
+</pre><h2>Genes in cluster<a name="2"></a></h2><pre class="codeoutput">SPO23
+FUS1
+PHO87
+PMT5
+RPN5
+SEC31
+ASF2
+YDL199C
+YDR109C
+PEX7
+SAN1
+MKC7
+ZIP1
+YDR291W
+GPI8
+YDR333C
+YDR341C
+YDR348C
+ATP17
+JIP4
+SNF1
+PEX29
+PHO8
+QCR7
+YDR531W
+GET2
+DOT6
+ATG18
+ROG3
+PES4
+TAD1
+ZIP2
+ORC6
+RSM25
+REV7
+</pre><h2>LeMoNe predicted transcriptome regulators<a name="3"></a></h2><pre class="codeoutput">HIR1
+EDS1
+THI2
+SRD1
+SNF1
+ACA1
+DOT6
+YER184C
+YFL052W
+IDH1
+</pre><h2>Transcriptome expression profiles<a name="4"></a></h2><img vspace="5" hspace="5" src="transcriptome_cluster_39_01.png" alt=""> <h2>Enriched MIPS functional categories<a name="5"></a></h2><pre class="codeoutput">electron transport and membrane-associated energy conservation (P=0.00388)
+DNA conformation modification (e.g. chromatin) (P=0.00433)
+assembly of protein complexes (P=0.0271)
+proteasomal degradation (ubiquitin/proteasomal pathway) (P=0.0378)
+pheromone response, mating-type determination, sex-specific proteins (P=0.0233)
+peroxisome (P=0.00105)
+</pre><h2>Enriched MIPS protein complexes<a name="6"></a></h2><pre class="codeoutput">Synaptonemal complex (SC) (P=1.8e-06)
+</pre><h2>Enriched cellular compartments<a name="7"></a></h2><pre class="codeoutput">integral membrane (P=0.0149)
+ER membrane (P=0.0378)
+chromosome structure (P=0.000122)
+vacuole (P=0.0373)
+</pre><h2>Enriched for known transcription factor targets<a name="8"></a></h2><pre class="codeoutput">YDR049W regulates [PMT5, REV7] (P=0.00451)
+ADR1 regulates [YDR291W, ROG3] (P=0.00703)
+GCN4 regulates [MKC7, YDR341C, PHO8] (P=0.00129)
+YER130C regulates [PMT5, REV7] (P=0.0142)
+OTU1 regulates [PMT5, RPN5, TAD1] (P=0.000754)
+NDT80 regulates [PHO87, MKC7] (P=0.00313)
+HIR3 regulates [SPO23, MKC7] (P=0.00956)
+SPT23 regulates [SPO23, RPN5] (P=0.00793)
+PPR1 regulates [PMT5, PEX7] (P=0.00313)
+YOX1 regulates [SPO23, MKC7] (P=0.019)
+DAT1 regulates [SPO23, MKC7] (P=0.00279)
+HAL9 regulates [SPO23, MKC7] (P=0.0151)
+</pre><h2>Enriched for known RNA binding protein targets<a name="9"></a></h2><pre class="codeoutput">BFR1 regulates [RPN5, YDR341C, SNF1, PHO8, YDR531W] (P=0.0215)
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Transcriptome cluster information page
+%
+
+%% Cluster number
+%clnum = 1;
+ix = find(total_clusters_big(:,clnum));
+disp(clnum)
+
+%% Genes in cluster
+gns = gene_names(ix);
+for m=1:length(gns)
+    fprintf('%s\n',gns{m});
+end
+
+%% LeMoNe predicted transcriptome regulators
+trreg = gene_names(totalclust_totalreg(:,clnum)>0);
+for m=1:length(trreg)
+    fprintf('%s\n',trreg{m});
+end
+
+%% Transcriptome expression profiles
+plot(total(ix,:)','b.-');
+axis tight
+
+%% Enriched MIPS functional categories
+pv = find(totalmipspval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',mips_names{m},totalmipspval(clnum,m));
+    end
+end
+
+%% Enriched MIPS protein complexes
+pv = find(totalcomplexpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',complex_names{m},totalcomplexpval(clnum,m));
+    end
+end
+
+%% Enriched cellular compartments
+pv = find(totallocalpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        fprintf('%s (P=%1.3g)\n',subcell_names{m},totallocalpval(clnum,m));
+    end
+end
+
+%% Enriched for known transcription factor targets
+tfs = find(sum(harb_med,2)>0);
+pv = find(totalharbpval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(harb_med(tfs(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{tfs(m)}, tgts, totalharbpval(clnum,m));
+    end
+end
+
+%% Enriched for known RNA binding protein targets
+rbps = find(sum(rbp,2)>0);
+pv = find(totalrbppval(clnum,:)<0.05);
+if isempty(pv)
+    fprintf('None');
+else
+    for m=pv
+        tgt = intersect(find(rbp(rbps(m),:)), ix');
+        tgts = gene_names{tgt(1)};
+        for g=2:length(tgt)
+            tgts = strcat(tgts, sprintf(', %s',gene_names{tgt(g)}));
+        end
+        fprintf('%s regulates [%s] (P=%1.3g)\n', gene_names{rbps(m)}, tgts, totalrbppval(clnum,m));
+    end
+end
+##### SOURCE END #####
+--></body></html>
